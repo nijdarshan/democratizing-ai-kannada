@@ -1,4 +1,5 @@
 # Democratizing AI x Kannada (Work in Progress)
+![Democratizing AI](./images/dai.png "a title")
 
 ## Overview
 
