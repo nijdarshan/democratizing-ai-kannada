@@ -1,5 +1,8 @@
+[![NLP](https://img.shields.io/badge/NLP-LLM-brightgreen.svg)](https://github.com/nijdarshan/democratizing-ai-kannada/)
+[![Kannada Language](https://img.shields.io/badge/Language-Kannada-red.svg)](https://github.com/nijdarshan/democratizing-ai-kannada/)
+
 # Democratizing AI x Kannada (Work in Progress)
-![Democratizing AI](./images/dai.png "a title")
+![Democratizing AI](./images/dai.png "Democratizing AI")
 
 ## Overview
 
