@@ -6,9 +6,24 @@
 
 ## Overview
 
-**Democratizing AI x Kannada** is an ongoing project aimed at bringing the power of AI, specifically in Natural Language Processing (NLP), to the Kannada language. Kannada, like many other regional languages, often lacks the rich datasets and resources available for languages such as English, French, or German. This project seeks to bridge that gap by creating and training AI models that can effectively process and understand Kannada.
+**Democratizing AI x Kannada** is an ongoing project aimed at bringing the power of AI, specifically in Natural Language Processing (NLP), to the less digitalized languages with [Dr.Haim Dubossarsky](https://www.qmul.ac.uk/eecs/people/profiles/haim-dubossarsky.html) at [Queen Mary University of London](https://www.qmul.ac.uk/eecs/). Kannada, like many other regional languages, often lacks the rich datasets and resources available for languages such as English, French, or German. This project seeks to bridge that gap by creating and training AI models to effectively process and understand Kannada.
 
-Our goal is to make cutting-edge AI accessible for low-resource languages like Kannada by leveraging existing NLP technologies. The focus is on developing tools that can transfer NLP models successfully across languages, enhancing the linguistic capabilities and accessibility of AI for a broader audience.
+The focus is on developing tools that can transfer NLP models successfully across languages, enhancing the linguistic capabilities and accessibility of AI for a broader audience. We aim to make AI accessible for low-resource languages listed below.
+
+- Arabic
+- Azerbaijani
+- Bengali
+- Hindi
+- Japanese
+- Kannada
+- Korean
+- Marathi
+- Polish
+- Punjabi
+- Swahili
+- Telugu
+- Urdu
+- Vietnamese
 
 ## Motivation
 
@@ -16,7 +31,7 @@ The project draws inspiration from several key ideas:
 
 - **Democratizing AI**: Making AI accessible to all, including speakers of underrepresented languages like Kannada.
 - **Local Patriotism**: Creating resources for the Kannada language, motivated by a deep sense of cultural identity.
-- **Social Justice**: Bridging the linguistic divide by ensuring that AI advancements benefit speakers of low-resource languages.
+- **Social Justice**: Bridging the linguistic divide by ensuring AI advancements benefit speakers of low-resource languages.
 - **Academic and Industry Recognition**: Positioning contributors as pioneers in this growing field, both in academia and industry.
 
 ## Research Focus
@@ -30,8 +45,6 @@ The core research questions guiding this project include:
 - **What can we learn from this cross-lingual perspective?**: Beyond practical applications, we aim to contribute to broader NLP research by uncovering linguistic insights that can improve understanding of language structures.
 
 ## Key Project Stages
-
-Though detailed processes are yet to be shared, the project is organized into the following high-level stages:
 
 1. **Dataset Development**: Building a robust dataset of polysemous words in Kannada through various resources, ensuring the dataset is curated with linguistic accuracy and relevance.
 2. **Training and Testing Models**: Adapting existing NLP models to work on Kannada, followed by training, validation, and testing of these models.
@@ -47,4 +60,4 @@ Though detailed processes are yet to be shared, the project is organized into th
 
 ---
 
-Stay tuned for more updates as the project progresses! If you are interested in collaborating or learning more, please reach out through our project's [GitHub repository](#).
+Stay tuned for more updates as the project progresses! If you are interested in collaborating or learning more, please reach out to me (<darshannij@gmil.com>) for Kannada or Dr.Haim (<h.dubossarsky@qmul.ac.uk>) for anything else.
