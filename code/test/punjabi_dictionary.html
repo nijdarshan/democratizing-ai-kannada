@@ -1,0 +1,525 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\r\n\r\n
+<html xmlns="http://www.w3.org/1999/xhtml">\r\n
+
+<head>
+    <title>\r\n\tPunjabi(Gurmukhi,Shahmukhi) to English Dictionary:: RCPLT Punjabi University, Patiala\r\n</title>\r\n
+    <script
+        type="text/javascript">\r\n\r\n  var _gaq = _gaq || []; \r\n  _gaq.push([\'_setAccount\', \'UA-25012180-1\']);\r\n  _gaq.push([\'_setDomainName\', \'.learnpunjabi.org\']);\r\n  _gaq.push([\'_trackPageview\']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;\r\n    ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';\r\n    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>
+    \r\n
+    <script language="javaScript"
+        type="text/javascript">\r\nvar selpad; \r\n//pic1= new Image(531,115); \r\n//pic1.src="http://s2g.advancedcentrepunjabi.org/shah_pad_f.jpg";\r\n//pic2= new Image(531,115); \r\n//pic2.src="http://s2g.advancedcentrepunjabi.org/guralpha.jpg";\r\n//pic3= new Image(531,114); \r\n//pic3.src="http://s2g.advancedcentrepunjabi.org/english_pad.jpg";\r\nfunction hideshow(hide,show){\r\ndocument.getElementById(hide).style.visibility=\'hidden\';\r\ndocument.getElementById(show).style.visibility=\'visible\';\r\n}\r\nvar browser = navigator.appName\r\nfunction fun1(id,value)\r\n{\r\n//alert(\'hi\')\r\nvar val1 = \'mwords/\' + value + \'.wav\'\r\n//alert(val1)\r\nvar str1 = \'<embed width=0 height=0 src="\' + val1 + \'">\'\r\n//alert(str1)\r\nif (browser==\'Netscape\')\r\n\t\tdocument.getElementById(id).innerHTML = str1\r\n\t else\t\r\n\t \tdocument.all[id].innerHTML =str1\t \t\r\n}\r\nfunction playsound(id,value)\r\n{\r\n//alert(\'browser\'+ browser);\r\nvar value1 = value + \'.wav\'\r\nstr1 = \'<embed width=10 height=10 src=\\\'\' + value1 + \'\\\'>\'\r\nstr2 = \'<embed width=0 height=0 src=\\\'\' + value1 + \'\\\'>\'\r\n//alert(value1);\r\nif (browser==\'Netscape\')\r\n\t\tdocument.getElementById(id).innerHTML = \'<object id="MediaPlayer1" width=0 height=0 classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112" standby="Loading..." type="application/x-oleobject"> <param name="FileName" value="\' + value1 + \'"> <param name="ShowControls" value="False"><embed type="application/x-mplayer2" name="MediaPlayer1" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/" width="0" height="0" src="\' + value1 + \'" controls="1"> </embed></object>\'\r\n\t else\t\r\n\t \tdocument.all[id].innerHTML =\'<object id="MediaPlayer1" width=0 height=0 classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112" standby="Loading..." type="application/x-oleobject"> <param name="FileName" value="\' + value1 + \'"> <param name="ShowControls" value="False"><embed type="application/x-mplayer2" name="MediaPlayer1" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/" width="0" height="0" src="\' + value1 + \'" controls="1"> </embed></object>\'\r\n}\r\nfunction init(){\r\nvar select = document.getElementById(\'lstLook\');\r\nvar language = document.getElementById(\'lang\');\r\nif (language.value==select.value){ChangeLang(select,0);} else {select.value=language.value;ChangeLang(select,0);}\r\nsetTimeout("ChkPage()",10);\r\nreturn true;\r\n}\r\nfunction ChangeLang(select,reset){\r\n\tvar language = document.getElementById(\'lang\');\r\n\tvar editor = document.getElementById(\'GurText\');\r\n\tvar fuzzy = document.getElementById(\'chkFuzzy\');\r\n\t//var editor = document.getElementById(\'shahpad\');\r\n\tlanguage.value=select.value;\r\n\tvar lang = select.value;\r\n\t//alert(lang);\r\n\t var pic= document.getElementById(\'keyboard\')\r\n\t \t //alert(pic.useMap);\r\n\t if (lang == 2){\r\n            pic.src= "gurkeys1.gif";\r\n            pic.useMap="#GurAlphaMap"\r\n            editor.dir="ltr";\r\n            fuzzy.disabled=false;\r\n     }\r\n     else if (lang == 3){\r\n            pic.src= "shahkeys.gif";\r\n            pic.useMap="#ShahAlphaMap";\r\n            editor.dir="rtl";\r\n            fuzzy.disabled=false;\r\n     }\r\n     else{\r\n            pic.src= "gurkeys1.gif";\r\n            pic.useMap="#GurAlphaMap"\r\n            editor.dir="ltr";\r\n            fuzzy.disabled=true;\r\n     }\r\n       if (reset==1) {editor.value="";}\r\n       editor.focus();\r\n       return true;\r\n    }\r\nfunction pad(myValue) { \r\n\t//var editor = document.getElementById(\'shahpad\');\r\n\tvar editor= document.getElementById(\'GurText\');\r\n\tvar language = document.getElementById(\'lang\');\r\n\teditor.focus();\r\n\tif (document.selection){\r\n\t\tvar selection =document.selection.createRange();\r\n\t\tselection.text= myValue;\r\n\t\r\n\t}else {\r\n\teditor.value= editor.value + myValue;\r\n\t}\r\n\tif(editor.value.length>1) {editor.value=formatUni(editor.value);editor.focus();}\r\n\t//editor.focus();\r\n}\r\nfunction txtEvent(evt){\r\n\tvar keyCode = evt.keyCode ? evt.keyCode : evt.charCode;\r\n\tvar keyCodeChar = String.fromCharCode(keyCode).toLowerCase();\r\n\tvar editor= document.getElementById(\'GurText\');\r\n\tvar lang= document.getElementById(\'lang\');\r\n\t//alert(keyCode);\r\n\t//alert(\'Event \'+ evt.type);\r\n\t//alert(\'Shift Key: \'+ evt.shiftKey);\r\n\t//alert(\'Alt Key: \'+ evt.altKey);\r\n\tvar start = evt.target.selectionStart;\r\n    var end = evt.target.selectionEnd;\r\n    var p = evt.target.value.substring(start, end);\r\n    if (p.length>0 && evt.target.name == "GurText") editor.value="";\r\n    \r\n\tif (evt.ctrlKey || keyCode==13 || keyCode==8 || keyCode==46 || keyCode==40 || keyCode==39 || keyCode==38 || keyCode==37){\r\n\t\treturn true;\r\n\t}\r\n if (evt.type==\'keypress\'){\r\n    var language = lang.value;\r\n\t\r\n\t\t\tif (language == 3){\r\n\t\t\t\tif (evt.altKey) {\r\n\t\t\t\t\tvar myValue= keyMapUnicodeAlt(keyCode);\r\n\t\t\t\t}\r\n\t\t\t\telse {\r\n\t\t\t\t\tvar myValue= keyMapUnicode(keyCode); \r\n\t\t\t\t}\t\r\n\t\t\t}\r\n\t\t\telse{\r\n\t\t\t\tif (language == 2){\r\n\t\t\t\t    var myValue= keyMapUnicodeGur(keyCode); \r\n\t\t\t\t}\r\n\t\t\t    else{\r\n\t\t\t\tvar myValue=String.fromCharCode(keyCode);\r\n\t\t\t    }\r\n\t\t\t}\r\n\t\teditor.focus();\r\n\tif (document.selection){\r\n\t\tsel=document.selection.createRange();\r\n\t\tsel.text=myValue;\r\n\t\tif(editor.value.length>1) {editor.value=formatUni(editor.value);editor.focus();}\r\n\t\treturn false;\r\n\t}else {\r\n\t//var myValue= keyMapUnicodeGur(keyCode);\r\n\t//alert(\'Event \'+ evt.type);\r\n\t//alert(\'Shift Key: \'+ evt.ctrlKey);\r\n\t    if (evt.ctrlKey){return  true;} else {editor.value= editor.value + myValue;}\r\n\tif(editor.value.length>1) {editor.value=formatUni(editor.value);editor.focus();}\r\n\treturn false;\r\n\t} // Documet.selection if-else\r\n } //Event if\r\n}\r\nfunction keyMapUnicode(keyValue){\r\n var uniValue=keyValue;\r\n \tswitch (keyValue){\r\n\t//124 no Change\r\n\tcase 92: uniValue=1550;\r\n\tbreak;\r\n\r\n\tcase 43:  uniValue=1570;\r\n\tbreak;\r\n\tcase 61:  uniValue= 1572;\r\n\tbreak;\r\n\r\n\tcase 95:  uniValue= 1617;\r\n\tbreak;\r\n\tcase 45:  uniValue= 1571;\r\n\tbreak;\r\n\t//Reverse Bracket\r\n    case 41:  uniValue= 40;\r\n\tbreak;\r\n\tcase 48:  uniValue= 1776;\r\n\tbreak;\r\n\r\n    //Reverse Bracket\r\n    case 40:  uniValue= 41;\r\n\tbreak;\r\n\tcase 57:  uniValue= 1785;\r\n\tbreak;\r\n\r\n\tcase 42:  uniValue= 1612;\r\n\tbreak;\r\n\tcase 56:  uniValue= 1784;\r\n\tbreak;\r\n\r\n\tcase 38:  uniValue=1620; //return String.fromCharCode(2637,2617);\r\n\tbreak;\r\n\tcase 55:  uniValue= 1783;\r\n\tbreak;\r\n\r\n\tcase 94:  uniValue= 1552;\r\n\tbreak;\r\n\tcase 54:  uniValue= 1782;\r\n\tbreak;\r\n\r\n\tcase 37:  uniValue= 1610;\r\n\tbreak;\r\n\tcase 53:  uniValue= 1781;\r\n\tbreak;\r\n\r\n\tcase 36:  uniValue= 1574;\r\n\tbreak;\r\n\tcase 52:  uniValue= 1780;\r\n\tbreak;\r\n\r\n//35 same\r\n\tcase 51:  uniValue= 1779;\r\n\tbreak;\r\n//64 same\r\n\tcase 50:  uniValue= 1778;\r\n\tbreak;\r\n//33 same\r\n\tcase 49:  uniValue= 1777;//return String.fromCharCode(2637,2608);\r\n\tbreak;\r\n\r\n\tcase 126:  uniValue= 1613;\r\n\tbreak;\r\n\tcase 96:  uniValue= 1611;\r\n\tbreak;\r\n//----------------------------------\r\n\tcase 125:  uniValue= 1643;\r\n\tbreak;\r\n//93 same\r\n\r\n\tcase 123:  uniValue= 1644;\r\n\tbreak;\r\n//91 same\r\n\r\n\tcase 80:  uniValue= 1615;\r\n\tbreak;\r\n\tcase 112:  uniValue= 1662;\r\n\tbreak;\r\n\r\n\tcase 79:  uniValue= 1731;\r\n\tbreak;\r\n\tcase 111:  uniValue= 1729;\r\n\tbreak;\r\n\r\n\tcase 73:  uniValue= 1622;\r\n\tbreak;\r\n\tcase 105:  uniValue= 1740;\r\n\tbreak;\r\n\r\n\tcase 85:  uniValue= 1623;\r\n\tbreak;\r\n\tcase 117:  uniValue= 1569;\r\n\tbreak;\r\n\r\n\tcase 89:  uniValue= 1537;\r\n\tbreak;\r\n\tcase 121:  uniValue= 1746;\r\n\tbreak;\r\n\r\n\tcase 84:  uniValue= 1657;\r\n\tbreak;\r\n\tcase 116:  uniValue= 1578;\r\n\tbreak;\r\n\r\n\tcase 82:  uniValue= 1681;\r\n\tbreak;\r\n\tcase 114:  uniValue= 1585;\r\n\tbreak;\r\n\r\n\tcase 69:  uniValue= 1553;\r\n\tbreak;\r\n\tcase 101:  uniValue= 1593;\r\n\tbreak;\r\n\r\n\tcase 87:  uniValue= 65018;\r\n\tbreak;\r\n\tcase 119:  uniValue= 1608;\r\n\tbreak;\r\n\r\n\tcase 81:  uniValue= 44;\r\n\tbreak;\r\n\tcase 113:  uniValue= 1602;\r\n\tbreak;\r\n//-----------------------------------\r\n\tcase 34:  uniValue= 45;\r\n\tbreak;\r\n\tcase 39:  uniValue= 46;\r\n\tbreak;\r\n//58 same\r\n\tcase 59:  uniValue= 1563;\r\n\tbreak;\r\n\r\n\tcase 76:  uniValue= 1554;\r\n\tbreak;\r\n\tcase 108:  uniValue= 1604;\r\n\tbreak;\r\n\r\n\tcase 75:  uniValue= 1582;\r\n\tbreak;\r\n \tcase 107: uniValue=1705;\r\n\tbreak;\r\n\r\n\tcase 74: uniValue=1590;\r\n\tbreak;\r\n\tcase 106: uniValue=1580;\r\n\tbreak;\r\n\r\n\tcase 72: uniValue=1581;\r\n\tbreak;\r\n\tcase 104: uniValue=1726;\r\n\tbreak;\r\n\r\n\tcase 71: uniValue=1594;\r\n\tbreak;\r\n\tcase 103: uniValue=1711;\r\n\tbreak;\r\n\r\n \tcase 70: uniValue=1648;\r\n\tbreak;\r\n\tcase 102: uniValue=1601;\r\n\tbreak;\r\n\r\n\tcase 68: uniValue=1672;\r\n\tbreak;\r\n\tcase 100: uniValue=1583;\r\n\tbreak;\r\n\r\n\tcase 83: uniValue=1589;\r\n\tbreak;\r\n\tcase 115: uniValue=1587;\r\n\tbreak;\r\n\r\n\tcase 65: uniValue=1619;\r\n\tbreak;\r\n\tcase 97: uniValue=1575;\r\n\tbreak;\r\n//----------------------------------\r\n\tcase 63: uniValue=1567;\r\n\tbreak;\r\n\tcase 47: uniValue=1618;\r\n\tbreak;\r\n\r\n\tcase 62: uniValue=1614;\r\n\tbreak;\r\n\tcase 46: uniValue=1748;\r\n\tbreak;\r\n\r\n\tcase 60: uniValue=1616;\r\n\tbreak;\r\n\tcase 44: uniValue=1548;\r\n\tbreak;\r\n\r\n\tcase 77: uniValue=1575;\r\n\tbreak;\r\n\tcase 109: uniValue=1605;\r\n\tbreak;\r\n\r\n\tcase 78: uniValue=1722;\r\n\tbreak;\r\n\tcase 110: uniValue=1606;\r\n\tbreak;\r\n\r\n\tcase 66: uniValue=1555;\r\n\tbreak;\r\n\tcase 98: uniValue=1576;\r\n\tbreak;\r\n\r\n\tcase 86: uniValue=1592;\r\n\tbreak;\r\n\tcase 118: uniValue=1591;\r\n\tbreak;\r\n\r\n\tcase 67: uniValue=1579;\r\n\tbreak;\r\n\tcase 99: uniValue=1670;\r\n\tbreak;\r\n\r\n\tcase 88: uniValue=1688;\r\n\tbreak;\r\n\tcase 120: uniValue=1588;\r\n\tbreak;\r\n\r\n\tcase 90: uniValue=1584;\r\n\tbreak;\r\n\tcase 122: uniValue=1586;\r\n\tbreak;\r\n//---------------------------------\r\n\t}\r\n return String.fromCharCode(uniValue);\r\n \r\n}\r\nfunction keyMapUnicodeAlt(keyValue){\r\n var uniValue = keyValue;\r\n var found=false;\r\n//alert("InAlt");\r\n \tswitch (keyValue) {\r\n\tcase 45: uniValue=64831;\r\nfound=true;\r\n\tbreak;\r\n\tcase 48: uniValue=64830;\r\nfound=true;\r\n\tbreak;\r\n\tcase 49: uniValue=43;\r\nfound=true;\r\n\tbreak;\r\n\tcase 50:  uniValue=45;\r\nfound=true;\r\n\tbreak;\r\n\tcase 51:  uniValue= 215;\r\nfound=true;\r\n\tbreak;\r\n\tcase 52:  uniValue= 247;\r\nfound=true;\r\n\tbreak;\r\n\tcase 53:  uniValue= 61;\r\nfound=true;\r\n\tbreak;\r\n\tcase 54: uniValue=1642;\r\nfound=true;\r\n\tbreak;\r\n\tcase 55:  uniValue=1645;\r\nfound=true;\r\n\tbreak;\r\n\tcase 56:  uniValue= 47;\r\nfound=true;\r\n\tbreak;\r\n\tcase 61:  uniValue= 65010;\r\nfound=true;\r\n\tbreak;\r\n\tcase 94:  uniValue= 1571;\r\nfound=true;\r\n\tbreak;\r\n\t}\r\n\tif (found) {\r\n  \t\treturn String.fromCharCode(uniValue);\r\n\t}\r\n\telse{\r\n\t\treturn -1;\r\n\t}\r\n}\r\n//-------------------------- Gurmukhi--------------\r\nfunction keyMapUnicodeGur(keyValue){\r\n var uniValue=keyValue;\r\n \tswitch (keyValue){\r\n\tcase 38: uniValue=2654;\r\n\tbreak;\r\n\tcase 60:  uniValue=2676;\r\n\tbreak;\r\n\tcase 65:  uniValue= 2565;\r\n\tbreak;\r\n\tcase 66:  uniValue= 2605;\r\n\tbreak;\r\n\tcase 67:  uniValue= 2587;\r\n\tbreak;\r\n\tcase 68:  uniValue= 2599;\r\n\tbreak;\r\n\tcase 69:  uniValue= 2579;\r\n\tbreak;\r\n\tcase 70:  uniValue= 2594;\r\n\tbreak;\r\n\tcase 71:  uniValue= 2584;\r\n\tbreak;\r\n\tcase 72:  return String.fromCharCode(2637,2617);\r\n\tbreak;\r\n\tcase 73:  uniValue= 2624;\r\n\tbreak;\r\n\tcase 74:  uniValue= 2589;\r\n\tbreak;\r\n\tcase 75:  uniValue= 2582;\r\n\tbreak;\r\n\tcase 76:  uniValue= 2611;\r\n\tbreak;\r\n\tcase 77:  uniValue= 2672;\r\n\tbreak;\r\n\tcase 78:  uniValue= 2562;\r\n\tbreak;\r\n\tcase 79:  uniValue= 2636;\r\n\tbreak;\r\n\tcase 80:  uniValue= 2603;\r\n\tbreak;\r\n\tcase 81:  uniValue= 2597;\r\n\tbreak;\r\n\tcase 82:  return String.fromCharCode(2637,2608);\r\n\tbreak;\r\n\tcase 83:  uniValue= 2614;\r\n\tbreak;\r\n\tcase 84:  uniValue= 2592;\r\n\tbreak;\r\n\tcase 85:  uniValue= 2626;\r\n\tbreak;\r\n\tcase 86:  uniValue= 2652;\r\n\tbreak;\r\n\tcase 87:  return String.fromCharCode(2622,2562);\r\n\tbreak;\r\n\tcase 88:  uniValue= 2607;\r\n\tbreak;\r\n\tcase 89:  uniValue= 2632;\r\n\tbreak;\r\n\tcase 90:  uniValue= 2650;\r\n\tbreak;\r\n\tcase 91:  uniValue= 2404;\r\n\tbreak;\r\n\tcase 92:  uniValue= 2590;\r\n\tbreak;\r\n\tcase 93:  return String.fromCharCode(2404,2404);\r\n\tbreak;\r\n\tcase 94:  uniValue= 2649;\r\n\tbreak;\r\n\tcase 95:  return String.fromCharCode(2637,2613);\r\n\tbreak;\r\n\tcase 96:  uniValue= 2673;\r\n\tbreak;\r\n\tcase 97:  uniValue= 2569;\r\n\tbreak;\r\n\tcase 98:  uniValue= 2604;\r\n\tbreak;\r\n\tcase 99:  uniValue= 2586;\r\n\tbreak;\r\n\tcase 100:  uniValue= 2598;\r\n\tbreak;\r\n\tcase 101:  uniValue= 2567;\r\n\tbreak;\r\n\tcase 102:  uniValue= 2593;\r\n\tbreak;\r\n\tcase 103:  uniValue= 2583;\r\n\tbreak;\r\n\tcase 104:  uniValue= 2617;\r\n\tbreak;\r\n\tcase 105:  return String.fromCharCode(8204,2623);//uniValue= 2623;\r\n\tbreak;\r\n\tcase 106:  uniValue= 2588;\r\n\tbreak;\r\n\tcase 107:  uniValue= 2581;\r\n\tbreak;\r\n\tcase 108:  uniValue= 2610;\r\n\tbreak;\r\n\tcase 109:  uniValue= 2606;\r\n\tbreak;\r\n\tcase 110:  uniValue= 2600;\r\n\tbreak;\r\n\tcase 111:  uniValue= 2635;\r\n\tbreak;\r\n\tcase 112:  uniValue= 2602;\r\n\tbreak;\r\n \tcase 113: uniValue=2596;\r\n\tbreak;\r\n\tcase 114: uniValue=2608;\r\n\tbreak;\r\n\tcase 115: uniValue=2616;\r\n\tbreak;\r\n\tcase 116: uniValue=2591;\r\n\tbreak;\r\n\tcase 117: uniValue=2625;\r\n\tbreak;\r\n\tcase 118: uniValue=2613;\r\n\tbreak;\r\n\tcase 119: uniValue=2622;\r\n\tbreak;\r\n \tcase 120: uniValue=2595;\r\n\tbreak;\r\n\tcase 121: uniValue=2631;\r\n\tbreak;\r\n\tcase 122: uniValue=2651;\r\n\tbreak;\r\n\t//case 123: uniValue=2;\r\n\t//break;\r\n\tcase 124: uniValue=2585;\r\n\tbreak;\r\n\t//case 125: uniValue=2;\r\n\t//break;\r\n\tcase 126: uniValue=2673;\r\n\tbreak;\r\n\t//case 127: uniValue=2;\r\n\t//break;\r\n}\r\n return String.fromCharCode(uniValue);\r\n \r\n}\r\nfunction Reset1_onclick() {\r\n    //alert("in Reset");\r\n    var editor = document.getElementById(\'GurText\');\r\n    if (editor){\r\n    editor.value="";\r\n    return true;\r\n    }\r\n    else{\r\n    alert("Object GurText not found!!!");\r\n    }\r\n}\r\nfunction formatUni(Input){\r\nvar iStr = new String(Input);\r\nvar oStr= new String();\r\nvar t,tmp,pre,nxt,nxt2nxt,chr;\r\nvar skip=0;\r\nif (iStr){\r\n    for (t=0; t< iStr.length; t++){\r\n        if (skip==1) {skip=0; continue;}\r\n        chr = iStr.charCodeAt(t);\r\n        if (t > 0 && t < iStr.length){pre=iStr.charCodeAt(t-1);}else{ pre=0;}\r\n        if (t < iStr.length - 1){nxt = iStr.charCodeAt(t+1);}else{ nxt=0;}\r\n        if (t < iStr.length - 2){nxt2nxt = iStr.charCodeAt(t+2);}else{ nxt2nxt=0;}\r\n        //if (chr==2623){\r\n        //alert("SehariFound and NXT is=" + nxt);\r\n          //  if ((pre==32 || pre==0 || pre==2562 || pre==2622 || pre==2623 || pre==2624 || pre==2625 || pre==2626 || pre==2631 || pre==2632 || pre==2635 || pre==2636 || pre==2672 || pre==2673 ) && nxt > 0){\r\n          //  oStr= oStr + String.fromCharCode(nxt) + String.fromCharCode(chr);\r\n          //  skip=1;\r\n          //  }\r\n        //}\r\n        if (pre==8204 && chr==2623 && nxt>0){oStr=oStr.substring(0,oStr.length-1);oStr= oStr + String.fromCharCode(nxt) + String.fromCharCode(chr);skip=1;}\r\n        if (pre==2623 && chr==2637 && nxt>0){if (t-1 > 0){oStr=oStr.substring(0,t-1);}else {oStr="";};oStr= oStr + String.fromCharCode(chr)+ String.fromCharCode(nxt) + String.fromCharCode(pre);skip=1;}\r\n        if (chr==2582 && nxt==2620){skip=1; oStr= oStr + String.fromCharCode(2649);}\r\n        if (chr==2588 && nxt==2620){skip=1; oStr= oStr + String.fromCharCode(2651);}\r\n        if (chr==2583 && nxt==2620){skip=1; oStr= oStr + String.fromCharCode(2650);}\r\n        if (chr==2603 && nxt==2620){skip=1; oStr= oStr + String.fromCharCode(2654);}\r\n        if (chr==2610 && nxt==2620){skip=1; oStr= oStr + String.fromCharCode(2611);}\r\n        if (chr==2616 && nxt==2620){skip=1; oStr= oStr + String.fromCharCode(2614);}\r\n        if (chr==8204 && nxt!=2623){continue;}\r\n        if (skip==0) {oStr= oStr + String.fromCharCode(chr); }       \r\n   }\r\n   oStr=formatUniLV(oStr);\r\n }\r\nreturn oStr;\r\n}\r\nfunction formatUniLV(Input){\r\nvar iStr = new String(Input);\r\nvar oStr= new String();\r\nvar t,tmp,pre,nxt,chr;\r\nvar skip=0;\r\nif (iStr){\r\n    for (t=0; t< iStr.length; t++){\r\n        if (skip==1) {skip=0; continue;}\r\n        chr = iStr.charCodeAt(t);\r\n        if (t > 0 && t < iStr.length){pre=iStr.charCodeAt(t-1);}else{ pre=0;}\r\n        if (t < iStr.length - 1){nxt = iStr.charCodeAt(t+1);}else{ nxt=0;}\r\n        if (chr==2675 || chr==2579){\r\n        //alert("Ura Found and NXT is=" + nxt);\r\n            if (nxt == 2625){\r\n            oStr= oStr + String.fromCharCode(2569);\r\n            skip=1;\r\n            }\r\n            if (nxt == 2626){\r\n            oStr= oStr + String.fromCharCode(2570);\r\n            skip=1;\r\n            }\r\n            if (nxt == 2635 || nxt==2636){\r\n            oStr= oStr + String.fromCharCode(2579);\r\n            skip=1;\r\n            }\r\n        }\r\n        if (chr==2565 || chr==2566 || chr==2576 || chr==2580){\r\n        //alert("Aera Found and NXT is=" + nxt);\r\n            if (nxt == 2622){\r\n            oStr= oStr + String.fromCharCode(2566);\r\n            skip=1;\r\n            }\r\n            if (nxt == 2632 || nxt==2631){\r\n            oStr= oStr + String.fromCharCode(2576);\r\n            skip=1;\r\n            }\r\n            if (nxt == 2635 || nxt==2636){\r\n            oStr= oStr + String.fromCharCode(2580);\r\n            skip=1;\r\n            }\r\n        }\r\n        if (chr==2674 || chr==2567 || chr==2568 || chr==2575){\r\n        //alert("Eri Found and NXT is=" + nxt);\r\n            if (nxt == 2623){\r\n            oStr= oStr + String.fromCharCode(2567);\r\n            skip=1;\r\n            }\r\n            if (nxt == 2624){\r\n            oStr= oStr + String.fromCharCode(2568);\r\n            skip=1;\r\n            }\r\n            if (nxt == 2631 || nxt==2632){\r\n            oStr= oStr + String.fromCharCode(2575);\r\n            skip=1;\r\n            }\r\n        }\r\n        if (skip==0) {oStr= oStr + String.fromCharCode(chr); }       \r\n   }\r\n }\r\nreturn oStr;\r\n}\r\nfunction callMe(){\r\n    setTimeout("ChkPage()",10);\r\n    return true;\r\n}\r\nfunction ChkPage(){\r\n    var ctlgoto = document.getElementById(\'btnGoToPage\');\r\n    var MAX=document.getElementById(\'MaxPageCount\');\r\n    var pn2 = document.getElementById(\'txtpn\');\r\n    var p,maxp;\r\n    if (pn2){\r\n        p=parseInt(pn2.value);\r\n        maxp=parseInt(MAX.value);\r\n        //alert("P="+p + " And "+ maxp);\r\n        if (p>0 && p<=maxp){ctlgoto.disabled=false;} else{ctlgoto.disabled=true;}\r\n    }\r\n   return true;\r\n}\r\n</script>
+    \r\n<style language=javascript type="text/css">
+        \r\n
+
+        /* body{margin:0;width:100%;height:100%} */
+        \r\n.button35 {
+            width: 35px;
+            background-color: #FFFFFF;
+            color: blue;
+        }
+
+        \r\n.button36 {
+            width: 35px;
+            color: blue;
+        }
+
+        \r\n.txtr {
+            color: maroon;
+        }
+
+        \r\n.txto {
+            color: red;
+        }
+
+        \r\n\r\n#loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: #fff
+        }
+    </style>\r\n
+</head>\r\n
+
+<body dir="ltr" onload="Javascript: return init();">\r\n<form method="post" action="default.aspx" id="dic"
+        enctype="multipart/form-data">\r\n<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+            value="/wEPDwUKMTc4ODY5NjE1NQ9kFgYCAw9kFggCCw8PFgIeB1Zpc2libGVoZGQCYw8PFgIeBFRleHQFEWF0IHBhZ2UgMCBvZiAxNzg0ZGQCbg8PFgQeC0NlbGxQYWRkaW5nAgUeBF8hU0ICgIAIZGQCdg8PFgYeCUJhY2tDb2xvcgqmAR8DAggfAGhkZAIFDw8WAh8BBWZDb3B5cmlnaHQgJmNvcHk7IFJDUExULCBQdW5qYWJpIFVuaXZlcnNpdHksIFBhdGlhbGEgKFB1bmphYikgSW5kaWEgPGJyPiBlTWFpbCB1czogc2FuZ2FtMjAwNUBnbWFpbC5jb21kZAIHDw8WAh8BBQxXZWIgSGl0cyA5OTlkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUIY2hrRnV6ennvjMgKpH1y2tenjmfOL5V9CPabDMEG2fAbvVJQe4UBhg==" />\r\n\r\n<input
+            type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />\r\n<input
+            type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+            value="/wEdAEO4S5b6/UjQdJJVDuyAZpis60i7JD5bT0ULspKuXTzZedAnssavdA8MTvbZsCQmZq3xAbH+vzpzThqi68CoMZQuJ2bKM2mZrp3qNW8otn1oNJUcgAnhlfXimSw4R0TjRRG6laISYVO8ID0HiAZh+osbYqu507CN+3I6wMPnUYCMXxog08R6995gH6OF6G0jWYINf7R6WKOGsOVS/fyZEJ/XdTrD0kJddpVqFADqiCA4Ho7U3Vc0WZ+wxclqyPFfzmPr2RVt5+s767GRtD2nQSdbbpBOV2R8REUvLs0HmLaSvUaz6Rs6w/mRtFpOGK59+RbIiNnSRJq1ndKG23vHtuWOIvo40Pe+blFxvXE7uumV5PPRNkUx5lyy6hX1O6GIfBDJ+N9q9JiyNLyX1SZ0PZZzpDLrZicmCRGSlX/mHvBAzYp5TzPgBAJAog8r48OY/ebvbH9hT7a/bowTkPl1XT5kps6yE5dvEEX9LZjmoPD5L7u5BBLA1jRxFZMdfgI8m8UW03r7xen7bjRkAmkhg7WUrWTK4IJeRtt5YORuuVAMRBU2qSbgwBStUmVEYKiChpRWH+4CVbn1byXEUmzty8VbhGbdbSRV4Ws9yz5uyWh2AcwUCSzOBL9UosYqfMTruclKpHACLx2ezeZ4+GExxq4kf3r31bTzstGvJgakduXvDQGplnbGPGNjRh+xFUa0g4LxH8rJgoEtrXKQISBZgd1jR4XYcvpSbCtwSVXVNNR9LocUEiHHMWW8Ywx+ihnXwfnac80dVFEaL6ruevwBmUl47uAXaRtcRFt4puBrELxbJa4GAfmlEAvtTFrWFR04HvEVZ37dyjExMyIfZdSrWsqvlUoBhvGelAFP7SbzNZDAhlwU5ZfZTqlfPbBE3p82atA6s7/Ik+nK9FqRoACPGfJWXUXRyznJ4/ZOhVVKlOYLfOExsByNc070CPguZaZMhuxBOGsyMZ2uhVTIQTKM69p0C5KI0AVfZLAHfQHh+DvcuzhI81+ezDplTjVtVqk4KK0EgJ9F1PdBO8sO4gF7KdrCsll6MMk6t3mz5q/AAEZiukugisauDTtaBh6a9KNTB2foUOriy40q/Ay0u27nvfbhXkra3uhiUvcSsjQXg6tz84hjy2j8SQCs8rBTpwOqPzEDewopF8lY56XKTUoGFazrLv7MHO50P6ixd3/yUbWEBiLBVyqRb2H9p0utkph50a7hLIMaYREBZLrXrP+3S/b77zU9MpT81M0Cqy9Cllnu2v4nnc4/D6NwTEw48/SvgnihXcLwzpLFnVYU5zeRD2iguvNiZ5CvRbHrxbFAniE/k5HUkM5cfvVXmfSTtIvdaRTkeGZhtkf7COnq8a/U9UaKrl+eT3DWzKT1sDDOe27P2aT3b8YhSJDY2Goc3MaV9QhEdSRZTdSt6VKtES2WupaK6Tl4L7hR7aaE2J/Ox0e96OTNoq+DjNC4QHqYvpbBlLo=" />\r\n
+        <table border="0" cellspacing="0" cellpadding="0" width="801px" align="center">\r\n<tr valign="top">
+                \r\n<!-- 1 -->\r\n <td>\r\n\t\t<table width="100%" cellspacing="0" cellpadding="1">\r\n\t\t<tr>
+                            \r\n\t\t\t<td align="left"><img src="dic_logo.gif"
+                                    alt="Online Punjabi to English Dictionary" /></td>\r\n\t\t\t<td align="center"
+                                valign="middle"><a href="http://www.learnpunjabi.org" target="_blank"><img border="0"
+                                        src="actdpl.gif" alt="ACTDPL, Punjabi University, Patiala India" /></a></td>
+                            \r\n\t\t</tr>\r\n\t\t\t</table>\r\n\t </td>\r\n </tr>\r\n<tr valign="top">\r\n<!-- 3 -->\r\n
+                <td>\r\n\t\t<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+                        bgcolor="#FAFAEB">\r\n \t<tr valign="top">\r\n \t\t<td align="center">\r\n\t\t\t\t\t<table
+                                    width="100%" border="0" align="center">\r\n\t\t\t\t\t\t<tr align="center">
+                                        \r\n\t\t\t\t\t\t\t<td valign="middle">\r\n\t\t\t\t\t\t\t<table align="center"
+                                                border="0">
+                                                \r\n\t\t\t\t\t\t\t<!-- Search and Keboard Table -->\r\n\t\t\t\t\t\t\t
+                                                <tr>\r\n\t\t\t\t\t\t\t<td width="57%">
+                                                        <table border="0" width="" bgcolor="#D1E3FF"
+                                                            style="border-left:1px solid #fd4404; border-right:1px solid #fd4404;border-top:1px solid #fd4404;border-bottom:1px solid #fd4404;">
+                                                            \r\n\t\t\t\t\t\t <tr align="left">\r\n\t\t\t\t\t\t <td>Look
+                                                                    in<select name="lstLook" id="lstLook"
+                                                                        onchange="javascript: return ChangeLang(this,1);">\r\n\t
+                                                                        <option selected="selected" value="2">Gurmukhi
+                                                                            Words</option>\r\n\t<option value="1">
+                                                                            English Meaning</option>\r\n\t<option
+                                                                            value="3">Shahmukhi Words</option>
+                                                                        \r\n\r\n</select>\r\n <span id="lblTotal">
+                                                                        <font size="3"></font>
+                                                                    </span>\r\n </td>\r\n <td rowspan="5">
+                                                                    \r\n\t\t\t\t\t\t <table border="0">\r\n\t\t\t\t\t\t
+                                                                        <tr>\r\n\t\t\t\t\t\t <td><img src=\'book2.gif\'
+                                                                                    width="16" height="16" /><input
+                                                                                    id="chkFuzzy" type="checkbox"
+                                                                                    name="chkFuzzy" /><span
+                                                                                    class="txto">Fuzzy Search</span>
+                                                                            </td>\r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t
+                                                                        \r\n\t\t\t\t\t\t <tr>
+                                                                            <td><img src=\'qmark.gif\' width="16"
+                                                                                    height="16" /> Which place</td>
+                                                                        </tr>\r\n\t\t\t\t\t\t <tr>\r\n\t\t\t\t\t\t <td>
+                                                                                \r\n <span id="rdoWhere"
+                                                                                    class="txtr"><input id="rdoWhere_0"
+                                                                                        type="radio" name="rdoWhere"
+                                                                                        value="1"
+                                                                                        checked="checked" /><label
+                                                                                        for="rdoWhere_0">Starting</label><br /><input
+                                                                                        id="rdoWhere_1" type="radio"
+                                                                                        name="rdoWhere"
+                                                                                        value="2" /><label
+                                                                                        for="rdoWhere_1">Ending</label><br /><input
+                                                                                        id="rdoWhere_2" type="radio"
+                                                                                        name="rdoWhere"
+                                                                                        value="0" /><label
+                                                                                        for="rdoWhere_2">Any
+                                                                                        where</label><br /><input
+                                                                                        id="rdoWhere_3" type="radio"
+                                                                                        name="rdoWhere"
+                                                                                        value="3" /><label
+                                                                                        for="rdoWhere_3">Word
+                                                                                        match</label></span></td>
+                                                                            \r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t
+                                                                        \t\t\t\t\t \r\n\t\t\t\t\t\t <tr>
+                                                                            <td><span id="Label1">
+                                                                                    <font size="3"></font>
+                                                                                </span></td>
+                                                                        </tr>\r\n\t\t\t\t\t\t </table>\r\n\t\t\t\t\t\t
+                                                                    \r\n\t\t\t\t\t\t </td>\r\n\t\t\t\t\t\t </tr>
+                                                            \r\n\t\t\t\t\t\t <tr align="left">\r\n\t\t\t\t\t\t <td
+                                                                    colspan="1" style="height: 15px">\r\n <input
+                                                                        name="GurText" type="text" maxlength="50"
+                                                                        id="GurText" title="Type the word to Search"
+                                                                        onkeypress="JavaScript: return txtEvent(event);"
+                                                                        style="FONT-SIZE:19px" /></td>\r\n\t\t\t\t\t\t
+                                                            </tr>\r\n\t\t\t\t\t\t <tr align="right">\r\n\t\t\t\t\t\t <td
+                                                                    colspan="1"><input type="button" value=" Clear "
+                                                                        id="Reset1"
+                                                                        onclick="JavaScript: return Reset1_onclick();" />\r\n\t\t\t\t\t\t
+                                                                    &nbsp;<input type="submit" name="btnSearch"
+                                                                        value="Search" id="btnSearch" />&nbsp;</td>
+                                                                \r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t <tr
+                                                                align="right">\r\n\t\t\t\t\t\t <td colspan="1"
+                                                                    style="height: 28px">\r\n Page No.<input
+                                                                        name="txtpn" type="text" id="txtpn"
+                                                                        title="Type the Page No"
+                                                                        onkeypress="JavaScript: return callMe();" />\r\n
+                                                                    &nbsp;<input type="submit" name="btnGoToPage"
+                                                                        value="Go to Page" id="btnGoToPage" /></td>
+                                                                \r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t </table>
+                                                    </td>\r\n\t\t\t\t\t\t\t<td width="431">\r\n\t\t\t\t\t\t
+                                                        <!--div id="shahalpha"><img id="keyboard" src="shah_pad_f.jpg" usemap="#ShahAlphaMap" border="1" alt="Shahmukhi key Pad"/></div-->\r\n\t\t\t\t\t\t
+                                                        <div align="right"><a
+                                                                href="http://g2s.learnpunjabi.org/keyboard1.gif"
+                                                                target="_blank" style="text-decoration:none;">ਫੋਨੈਟਿਕ
+                                                                ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਵੇਖੋ</a></div>\r\n\t\t\t\t\t\t <div
+                                                            id="guralpha"><img id=\'keyboard\' src="gurkeys1.gif"
+                                                                usemap="#GurAlphaMap" border="1"
+                                                                alt="Gurmukhi Key Map" /></div>\r\n\t\t\t\t\t\t </td>
+                                                    \r\n\t\t\t\t\t\t </tr>
+                                                \r\n\t\t\t\t\t\t\t<!-- End of Search and Keboard Table -->\r\n\t\t\t\t\t\t\t
+                                            </table>\r\n\t\t\t\t\t\t</td>
+                                    </tr>\r\n\t\t\t\t\t\t<tr align="center">
+                                        \r\n\t\t\t\t\t\t<!-- Alphabet Table -->\r\n\t\t\t\t\t\t\t<td colspan="2"
+                                            valign="middle">\r\n\t\t\t\t\t\t\t\t<table bgcolor="#D1E3FF"
+                                                style="border-left:1px solid #fd4404; border-right:1px solid #fd4404;border-top:1px solid #fd4404;border-bottom:1px solid #fd4404;">
+                                                \r\n\t\t\t\t\t\t <tr>\r\n\t\t\t\t\t\t <td><input type="submit"
+                                                            name="btn1" value="ੳ" id="btn1" class="button36" /></td>
+                                                    \r\n\t\t\t\t\t\t <td><input type="submit" name="btn2" value="ਅ"
+                                                            id="btn2" class="button36" /></td>\r\n\t\t\t\t\t\t <td>
+                                                        <input type="submit" name="btn3" value="ੲ" id="btn3"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn4" value="ਸ" id="btn4"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn5" value="ਹ" id="btn5"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t
+                                                    <td><input type="submit" name="btn6" value="ਕ" id="btn6"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn7" value="ਖ" id="Btn7"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn8" value="ਗ" id="btn8"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn9" value="ਘ" id="btn9"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn10" value="ਙ" id="btn10"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t
+                                                    <td><input type="submit" name="btn11" value="ਚ" id="btn11"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn12" value="ਛ" id="btn12"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn13" value="ਜ" id="Btn13"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn14" value="ਝ" id="btn14"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn15" value="ਞ" id="btn15"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t
+                                                    <td><input type="submit" name="btn16" value="ਟ" id="btn16"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="btn17" value="ਠ" id="btn17"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn18" value="ਡ" id="Btn18"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn19" value="ਢ" id="Btn19"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn20" value="ਣ" id="Btn20"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t
+                                                    \t\t\t\t\t \r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t <tr>
+                                                    \r\n\t\t\t\t\t\t <td><input type="submit" name="Btn21" value="ਤ"
+                                                            id="Btn21" class="button35" /></td>\r\n\t\t\t\t\t\t <td>
+                                                        <input type="submit" name="Btn22" value="ਥ" id="Btn22"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn23" value="ਦ" id="Btn23"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn24" value="ਧ" id="Btn24"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn25" value="ਨ" id="Btn25"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t
+                                                    <td><input type="submit" name="Btn26" value="ਪ" id="Btn26"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn27" value="ਫ" id="Btn27"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn28" value="ਬ" id="Btn28"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn29" value="ਭ" id="Btn29"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn30" value="ਮ" id="Btn30"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t
+                                                    <td><input type="submit" name="Btn31" value="ਯ" id="Btn31"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn32" value="ਰ" id="Btn32"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn33" value="ਲ" id="Btn33"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn34" value="ਵ" id="Btn34"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t <td><input
+                                                            type="submit" name="Btn35" value="ੜ" id="Btn35"
+                                                            class="button35" /></td>\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t
+                                                    <td><input type="submit" name="Btn36" value="ਸ਼" id="Btn36"
+                                                            class="button36" /></td>\r\n\t\t\t\t\t\t <td>&nbsp;</td>
+                                                    \r\n\t\t\t\t\t\t <td>&nbsp;</td>\r\n\t\t\t\t\t\t <td>&nbsp;</td>
+                                                    \r\n\t\t\t\t\t\t <td>&nbsp;</td>\r\n\t\t\t\t\t\t </tr>
+                                                \r\n\t\t\t\t\t\t </table>\t\t\t\t\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t
+                                    </tr>\r\n\t\t\t\t\t\t<tr align="center">\r\n\t\t\t\t\t\t <td colspan="2"
+                                            style="height: 26px">\r\n\t\t\t\t\t\t <table width="99%" align="center">
+                                                \r\n\t\t\t\t\t\t <tr>\r\n\t\t\t\t\t\t <td align="left">\r\n\t\t\t\t\t\t
+                                                        <table width="100%" bgcolor="#ffffFF"
+                                                            style="border-left:1px solid #fd4404; border-right:1px solid #fd4404;border-top:1px solid #fd4404;border-bottom:1px solid #fd4404;">
+                                                            \r\n\t\t\t\t\t\t <tr>\r\n\t\t\t\t\t\t <td><span
+                                                                        id="lblFound">
+                                                                        <font size="5"></font>
+                                                                    </span></td>\r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t
+                                                        </table>\t\r\n\t\t\t\t\t\t </td>\r\n\t\t\t\t\t\t <td>
+                                                        \r\n\t\t\t\t\t\t <table align="center">\r\n\t\t\t\t\t\t <tr>
+                                                                \r\n\t\t\t\t\t\t <td>&nbsp;<input type="submit"
+                                                                        name="btnFirst" value="|&lt;" id="btnFirst" />
+                                                                </td>\r\n\t\t\t\t\t\t <td><input type="submit"
+                                                                        name="btnPrev" value="&lt;" id="btnPrev" /></td>
+                                                                \r\n\t\t\t\t\t\t <td><span id="lblPage">at page 0 of
+                                                                        1784</span><input type="hidden"
+                                                                        name="hiddenPage" id="hiddenPage" value="0" />
+                                                                </td>\r\n <td><input type="submit" name="btnNxt"
+                                                                        value=">" id="btnNxt" /></td>\r\n <td><input
+                                                                        type="submit" name="btnLast" value=">|"
+                                                                        id="btnLast" />&nbsp;</td>\r\n\t\t\t\t\t\t </tr>
+                                                            \r\n\t\t\t\t\t\t </table>\r\n\t\t\t\t\t\t </td>
+                                                    \r\n\t\t\t\t\t\t <td>
+                                                        <table border="0">\r\n\t\t\t\t\t\t <tr>\r\n\t\t\t\t\t\t <td
+                                                                    rowspan="2"><img src="install.gif" border="0"
+                                                                        alt="" /></td>\r\n\t\t\t\t\t\t <td>
+                                                                    <font size="1" face="verdana">Download Urdu
+                                                                        Nastaleeq fonts</font>
+                                                                </td>\r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t <tr>
+                                                                \r\n\t\t\t\t\t\t <td>
+                                                                    <font size="1" face="verdana">
+                                                                        <font size="1" face="verdana"><a
+                                                                                href="http://ildc.in/urdu/htm/otfonts.htm"
+                                                                                target="_blank">http://ildc.in/urdu/htm/otfonts.htm</a>
+                                                                        </font>
+                                                                </td>\r\n\t\t\t\t\t\t </tr>\r\n\t\t\t\t\t\t </table>
+                                                    </td>\r\n </tr>\r\n </table>\r\n\t\t\t\t\t\t </td>\r\n\t\t\t\t\t\t
+                                    </tr>\r\n\t\t\t\t\t</table>\r\n &nbsp;&nbsp;\r\n\t\t\t\t\t <input type="hidden"
+                                    name="uLimit" id="uLimit" />\r\n\t\t\t\t\t <input type="hidden" name="MaxPageCount"
+                                    id="MaxPageCount" value="1784" />\r\n &nbsp; &nbsp;\r\n <table id="TblUser"
+                                    cellpadding="5" width="112">\r\n\r\n</table>\r\n<!-- Gurmukhi Map -->\r\n<map
+                                    name="GurAlphaMap" id="Map1">\r\n<area alt="" shape="rect" coords=" 3,5,28,26"
+                                        href=" javascript:pad(\'&#2562\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 27,5,50,26" href=" javascript:pad(\'&#2622\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 52,5,75,26"
+                                        href=" javascript:pad(\'&#2622&#2562\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 77,5,101,26" href=" javascript:pad(\'&#8204&#2623\')" />\r\n<area
+                                        alt="" shape="rect" coords=" 102,5,127,26"
+                                        href=" javascript:pad(\'&#2624\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 129,5,153,26" href=" javascript:pad(\'&#2631\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 155,5,179,26"
+                                        href=" javascript:pad(\'&#2632\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 181,5,206,26" href=" javascript:pad(\'&#2635\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 208,5,232,26"
+                                        href=" javascript:pad(\'&#2636\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 234,5,257,26" href=" javascript:pad(\'&#2625\')" />\r\n\r\n<area alt=""
+                                        shape="rect" coords=" 260,5,283,26"
+                                        href=" javascript:pad(\'&#2626\')" />\r\n<!--area alt=""  shape="rect" coords=" 285,5,309,26" href=" javascript:pad(\'&#2620\')"/-->\r\n<!-- area alt=""  shape="rect" coords=" 311,5,335,26" href=" javascript:pad(\'&#\')"/ -->\r\n\r\n<!-- 2 Row -->\r\n<area
+                                        alt="" shape="rect" coords=" 3,28,28,52"
+                                        href=" javascript:pad(\'&#2672\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 27,28,50,52" href=" javascript:pad(\'&#2675\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 52,28,75,52"
+                                        href=" javascript:pad(\'&#2565\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 77,28,101,52" href=" javascript:pad(\'&#2674\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 102,28,127,52"
+                                        href=" javascript:pad(\'&#2616\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 129,28,153,52" href=" javascript:pad(\'&#2617\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 155,28,179,52"
+                                        href=" javascript:pad(\'&#2581\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 181,28,206,52" href=" javascript:pad(\'&#2582\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 208,28,232,52"
+                                        href=" javascript:pad(\'&#2583\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 234,28,257,52" href=" javascript:pad(\'&#2584\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 260,28,283,52"
+                                        href=" javascript:pad(\'&#2585\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 285,28,309,52" href=" javascript:pad(\'&#2569\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 311,28,335,52"
+                                        href=" javascript:pad(\'&#2570\')" />\r\n<!-- 3 Row 63 89-->\r\n<area alt=""
+                                        shape="rect" coords=" 3,60,28,80" href=" javascript:pad(\'&#2673\')" />\r\n<area
+                                        alt="" shape="rect" coords=" 27,60,50,80"
+                                        href=" javascript:pad(\'&#2586\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 52,60,75,80" href=" javascript:pad(\'&#2587\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 77,60,101,80"
+                                        href=" javascript:pad(\'&#2588\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 102,60,127,80" href=" javascript:pad(\'&#2589\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 129,60,153,80"
+                                        href=" javascript:pad(\'&#2590\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 155,60,179,80" href=" javascript:pad(\'&#2591\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 181,60,206,80"
+                                        href=" javascript:pad(\'&#2592\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 208,60,232,80" href=" javascript:pad(\'&#2593\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 234,60,257,80"
+                                        href=" javascript:pad(\'&#2594\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 260,60,283,80" href=" javascript:pad(\'&#2595\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 285,60,309,80"
+                                        href=" javascript:pad(\'&#2579\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 311,60,335,80"
+                                        href=" javascript:pad(\'&#2565\')" />\r\n<!-- 4 Row 93 118-->\r\n<area alt=""
+                                        shape="rect" coords=" 3,82,28,104"
+                                        href=" javascript:pad(\'&#2637&#2608\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 27,82,50,104" href=" javascript:pad(\'&#2596\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 52,82,75,104"
+                                        href=" javascript:pad(\'&#2597\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 77,82,101,104" href=" javascript:pad(\'&#2598\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 102,82,127,104"
+                                        href=" javascript:pad(\'&#2599\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 129,82,153,104" href=" javascript:pad(\'&#2600\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 155,82,179,104"
+                                        href=" javascript:pad(\'&#2602\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 181,82,206,104" href=" javascript:pad(\'&#2603\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 208,82,232,104"
+                                        href=" javascript:pad(\'&#2604\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 234,82,257,104" href=" javascript:pad(\'&#2605\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 260,82,283,104"
+                                        href=" javascript:pad(\'&#2606\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 285,82,309,104" href=" javascript:pad(\'&#2566\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 311,82,335,104"
+                                        href=" javascript:pad(\'&#2576\')" />\r\n<!-- Next Row 123 148-->\r\n<area
+                                        alt="" shape="rect" coords=" 3,106,28,130"
+                                        href=" javascript:pad(\'&#2637&#2617\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 27,106,50,130" href=" javascript:pad(\'&#2607\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 52,106,75,130"
+                                        href=" javascript:pad(\'&#2608\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 77,106,101,130" href=" javascript:pad(\'&#2610\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 102,106,127,130"
+                                        href=" javascript:pad(\'&#2613\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 129,106,153,130" href=" javascript:pad(\'&#2652\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 155,106,179,130"
+                                        href=" javascript:pad(\'&#2614\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 181,106,206,130" href=" javascript:pad(\'&#2649\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 208,106,232,130"
+                                        href=" javascript:pad(\'&#2650\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 234,106,257,130" href=" javascript:pad(\'&#2651\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 260,106,283,130"
+                                        href=" javascript:pad(\'&#2654\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 285,106,309,130" href=" javascript:pad(\'&#2580\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 311,106,335,130"
+                                        href=" javascript:pad(\'&#2575\')" />\r\n<!-- last Row -->\r\n<area alt=""
+                                        shape="rect" coords=" 4,132,28,155"
+                                        href=" javascript:pad(\'&#2637&#2613\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 53,132,257,155" href=" javascript:pad(\' \')" />\r\n<area alt=""
+                                        shape="rect" coords=" 260,132,283,155"
+                                        href=" javascript:pad(\'&#2611\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 285,132,309,155" href=" javascript:pad(\'&#2567\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 311,132,335,155"
+                                        href=" javascript:pad(\'&#2568\')" />\r\n\r\n</map> \r\n<map name="ShahAlphaMap"
+                                    id="ShahAlphaMap">\r\n<area alt="" shape="rect" coords=" 3,5,28,26"
+                                        href=" javascript:pad(\'&#1584\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 27,5,50,26" href=" javascript:pad(\'&#1672\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 52,5,75,26" href=" javascript:pad(\'&#1583\')" />\r\n<area
+                                        alt="" shape="rect" coords=" 77,5,101,26"
+                                        href=" javascript:pad(\'&#1582\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 102,5,127,26" href=" javascript:pad(\'&#1581\')" />\r\n\r\n<area alt=""
+                                        shape="rect" coords=" 129,5,153,26"
+                                        href=" javascript:pad(\'&#1670\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 155,5,179,26" href=" javascript:pad(\'&#1580\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 181,5,206,26"
+                                        href=" javascript:pad(\'&#1579\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 208,5,232,26" href=" javascript:pad(\'&#1657\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 234,5,257,26"
+                                        href=" javascript:pad(\'&#1578\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 260,5,283,26" href=" javascript:pad(\'&#1662\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 285,5,309,26"
+                                        href=" javascript:pad(\'&#1576\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 311,5,335,26"
+                                        href=" javascript:pad(\'&#1575\')" />\r\n\r\n<!-- 2 Row -->\r\n<area alt=""
+                                        shape="rect" coords=" 3,28,28,52" href=" javascript:pad(\'&#1601\')" />\r\n<area
+                                        alt="" shape="rect" coords=" 27,28,50,52"
+                                        href=" javascript:pad(\'&#1594\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 52,28,75,52" href=" javascript:pad(\'&#1593\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 77,28,101,52"
+                                        href=" javascript:pad(\'&#1592\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 102,28,127,52" href=" javascript:pad(\'&#1591\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 129,28,153,52"
+                                        href=" javascript:pad(\'&#1590\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 155,28,179,52" href=" javascript:pad(\'&#1589\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 181,28,206,52"
+                                        href=" javascript:pad(\'&#1588\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 208,28,232,52" href=" javascript:pad(\'&#1587\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 234,28,257,52"
+                                        href=" javascript:pad(\'&#1688\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 260,28,283,52" href=" javascript:pad(\'&#1586\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 285,28,309,52"
+                                        href=" javascript:pad(\'&#1681\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 311,28,335,52"
+                                        href=" javascript:pad(\'&#1585\')" />\r\n<!-- 3 Row 63 89-->\r\n<area alt=""
+                                        shape="rect" coords=" 3,60,28,80" href=" javascript:pad(\'&#1726\')" />\r\n<area
+                                        alt="" shape="rect" coords=" 27,60,50,80"
+                                        href=" javascript:pad(\'&#1722\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 52,60,75,80" href=" javascript:pad(\'&#1746\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 77,60,101,80"
+                                        href=" javascript:pad(\'&#1740\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 102,60,127,80" href=" javascript:pad(\'&#1569\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 129,60,153,80"
+                                        href=" javascript:pad(\'&#1729\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 155,60,179,80" href=" javascript:pad(\'&#1608\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 181,60,206,80"
+                                        href=" javascript:pad(\'&#1606\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 208,60,232,80" href=" javascript:pad(\'&#1605\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 234,60,257,80"
+                                        href=" javascript:pad(\'&#1604\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 260,60,283,80" href=" javascript:pad(\'&#1711\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 285,60,309,80"
+                                        href=" javascript:pad(\'&#1705\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 311,60,335,80"
+                                        href=" javascript:pad(\'&#1602\')" />\r\n<!-- 4 Row 93 118-->\r\n<area alt=""
+                                        shape="rect" coords=" 3,82,28,104"
+                                        href=" javascript:pad(\'&#1648\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 27,82,50,104" href=" javascript:pad(\'&#1617\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 52,82,75,104"
+                                        href=" javascript:pad(\'&#1615\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 77,82,101,104" href=" javascript:pad(\'&#1611\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 102,82,127,104"
+                                        href=" javascript:pad(\'&#1616\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 129,82,153,104" href=" javascript:pad(\'&#1614\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 155,82,179,104"
+                                        href=" javascript:pad(\'&#1619\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 181,82,206,104" href=" javascript:pad(\'&#1570\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 208,82,232,104"
+                                        href=" javascript:pad(\'&#1554\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 234,82,257,104" href=" javascript:pad(\'&#1555\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 260,82,283,104"
+                                        href=" javascript:pad(\'&#1553\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 285,82,309,104" href=" javascript:pad(\'&#1552\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 311,82,335,104"
+                                        href=" javascript:pad(\'&#65010\')" />\r\n<!-- Next Row 123 148-->\r\n<area
+                                        alt="" shape="rect" coords=" 3,106,28,130"
+                                        href=" javascript:pad(\'&#1776\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 27,106,50,130" href=" javascript:pad(\'&#1785\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 52,106,75,130"
+                                        href=" javascript:pad(\'&#1784\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 77,106,101,130" href=" javascript:pad(\'&#1783\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 102,106,127,130"
+                                        href=" javascript:pad(\'&#1782\')" />\r\n\r\n<area alt="" shape="rect"
+                                        coords=" 129,106,153,130" href=" javascript:pad(\'&#1781\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 155,106,179,130"
+                                        href=" javascript:pad(\'&#1780\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 181,106,206,130" href=" javascript:pad(\'&#1779\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 208,106,232,130"
+                                        href=" javascript:pad(\'&#1778\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 234,106,257,130" href=" javascript:pad(\'&#1777\')" />\r\n\r\n<area
+                                        alt="" shape="rect" coords=" 260,106,283,130"
+                                        href=" javascript:pad(\'&#1747\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 285,106,309,130" href=" javascript:pad(\'&#1574&#1740\')" />\r\n<area
+                                        alt="" shape="rect" coords=" 311,106,335,130"
+                                        href=" javascript:pad(\'&#1572\')" />\r\n<!-- last Row -->\r\n<area alt=""
+                                        shape="rect" coords=" 4,132,28,155"
+                                        href=" javascript:pad(\'&#1748\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 28,132,50,155" href=" javascript:pad(\'&#1567\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 53,132,257,155" href=" javascript:pad(\' \')" />\r\n<area
+                                        alt="" shape="rect" coords=" 260,132,283,155"
+                                        href=" javascript:pad(\'&#1548\')" />\r\n<area alt="" shape="rect"
+                                        coords=" 285,132,309,155" href=" javascript:pad(\'&#1563\')" />\r\n<area alt=""
+                                        shape="rect" coords=" 311,132,335,155"
+                                        href=" javascript:pad(\'&#1642\')" />\r\n\r\n</map>\r\n\t\t\t\t</td>\r\n\t\t\t
+                        </tr>\r\n\t\t</table>\r\n <span id="LblTest"></span>\r\n \r\n </td> \r\n</tr>
+            \r\n<!--tr valign="top">\r\n            \t<td align="center">\r\n            \t\r\n              </td>\r\n</tr-->\r\n
+        </table>\r\n<!-- Sound Player -->\r\n<table>
+            <tr>
+                <td id="soundPlayer" style="width: 3px">\r\n </td>
+            </tr>
+        </table>\r\n \r\n <input type="hidden" name="lang" id="lang" value="2" />\r\n <input type="hidden"
+            name="isAlphaClick" id="isAlphaClick" value="1" />\r\n <input type="hidden" name="SaveQuery"
+            id="SaveQuery" />\r\n <input type="hidden" name="SavePcode" id="SavePcode" />\r\n <input type="hidden"
+            name="saveAtPage" id="saveAtPage" value="0" />\r\n <input type="hidden" name="SaveMaxRec" id="SaveMaxRec"
+            value="0" />\r\n \r\n <input type="hidden" name="ChkwordBoundary" id="ChkwordBoundary" value="0" />\r\n
+        <input type="hidden" name="lookGur" id="lookGur" value="0" />\r\n <input type="hidden" name="lookMeaning"
+            id="lookMeaning" value="0" />\r\n <input type="hidden" name="lookShah" id="lookShah" value="0" />\r\n \r\n
+        <!-- /Sound Player --></form>\r\n \r\n <table align="center" style="background-image:url(bgcopy.gif);">
+        <tr>
+            <td align="center" width="755" height="59">
+                <font face="verdana" \r\r\ncolor="white" size="1"><span id="FrmGur">Copyright &copy; RCPLT, Punjabi
+                        University, Patiala (Punjab) India <br> eMail us: <a href="/cdn-cgi/l/email-protection"
+                            class="__cf_email__"
+                            data-cfemail="ccbfada2abada1fefcfcf98caba1ada5a0e2afa3a1">[email&#160;protected]</a></span>
+                </font>
+            </td>
+        </tr>
+    </table>\r\n<div align="center">
+        <font face="verdana" color=green size="1">\r\n <span id="lblcounter">Web Hits 999</span></font>
+    </div>\r\n
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>\r\n
+    <script src="script/soundmanager2.js"></script>\r\n
+    <link rel="stylesheet" type="text/css" href="css/mp3-player-button.css" />\r\n
+    <link rel="stylesheet" type="text/css" href="css/inlineplayer.css" />
+    \r\n<!-- soundManager.useFlashBlock: related CSS -->\r\n
+    <link rel="stylesheet" type="text/css" href="css/flashblock.css" />\r\n
+    <script type="text/javascript" src="script/mp3-player-button.js"></script>\r\n
+    <script type="text/javascript" src="script/inlineplayer.js"></script>\r
+    <script
+        type="text/javascript">\r\n$(document).ready(function () { \r\n    soundManager.setup({ \r\n    url: \'swf/\',\r\n    onready: function() {\r\n//    var mySound = soundManager.createSound({\r\n//      id: \'aSound\',\r\n//      url: \'sound_empty/1/01urra.mp3\'\r\n//    });\r\n//    alert("Playing...");\r\n//    mySound.play();\r\n    },\r\n    ontimeout: function() {\r\n    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?\r\n        alert("Unable to load sound!");\r\n    }\r\n    });\r\n    //Disable cut copy paste\r\n    $(\'body\').bind(\'cut copy paste\', function (e) {\r\n        if (e.target.name != "GurText"){\r\n            e.preventDefault();\r\n        }\r\n    });\r\n   \r\n    //Disable mouse right click\r\n    $("body").on("contextmenu",function(e){\r\n        if (e.target.name != "GurText"){\r\n            return false;\r\n        }\r\n    });\r\n});\r\n</script>
+    \r\n
+</body>\r\n
+
+</html>'

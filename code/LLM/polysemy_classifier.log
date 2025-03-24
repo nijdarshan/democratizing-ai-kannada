@@ -1,0 +1,45 @@
+2024-10-29 13:52:40,001 - INFO - Processing word: ಅಡಿ
+2024-10-29 13:52:53,134 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 13:52:57,346 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 13:53:01,515 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 13:53:01,517 - ERROR - Failed to process word ಅಡಿ: RetryError[<Future at 0x1bb7a2be160 state=finished raised APIError>]
+2024-10-29 13:53:01,518 - INFO - Processing word: ಗುಂಡಿ
+2024-10-29 13:53:02,076 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 13:53:06,261 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 13:53:10,437 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 13:53:10,439 - ERROR - Failed to process word ಗುಂಡಿ: RetryError[<Future at 0x1bb79da5760 state=finished raised APIError>]
+2024-10-29 13:53:10,441 - INFO - Processing word: ಮಂಡಿ
+2024-10-29 13:53:10,600 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 14:43:50,452 - INFO - Processing word: ಅಡಿ
+2024-10-29 14:44:03,417 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 14:44:07,597 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 403 Forbidden"
+2024-10-29 14:54:21,898 - ERROR - Failed to initialize credentials: [Errno 2] No such file or directory: 'path/to/your/service-account-key.json'
+2024-10-29 14:54:21,898 - ERROR - Application error: [Errno 2] No such file or directory: 'path/to/your/service-account-key.json'
+2024-10-29 14:54:54,476 - INFO - Processing word: ಅಡಿ
+2024-10-29 14:54:55,470 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 14:54:55,472 - INFO - Retrying request to /v1/messages in 0.810515 seconds
+2024-10-29 14:54:56,500 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 14:54:56,504 - INFO - Retrying request to /v1/messages in 1.514979 seconds
+2024-10-29 14:54:58,226 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 15:01:43,789 - INFO - Processing word: ಅಡಿ
+2024-10-29 15:01:44,698 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 15:01:44,698 - INFO - Retrying request to /v1/messages in 0.849227 seconds
+2024-10-29 15:01:45,760 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 15:01:45,762 - INFO - Retrying request to /v1/messages in 1.840262 seconds
+2024-10-29 16:23:51,327 - INFO - Processing word: ಅಡಿ
+2024-10-29 16:23:52,323 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 16:23:52,326 - INFO - Retrying request to /v1/messages in 0.937827 seconds
+2024-10-29 16:23:53,466 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 16:23:53,468 - INFO - Retrying request to /v1/messages in 1.584622 seconds
+2024-10-29 16:23:55,236 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 16:26:57,434 - INFO - Processing word: ಅಡಿ
+2024-10-29 16:26:58,348 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 16:26:58,350 - INFO - Retrying request to /v1/messages in 0.979443 seconds
+2024-10-29 16:26:59,541 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 16:26:59,544 - INFO - Retrying request to /v1/messages in 1.574668 seconds
+2024-10-29 16:27:01,304 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 18:30:52,628 - INFO - Processing word: ಅಡಿ
+2024-10-29 18:30:53,533 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 18:30:53,535 - INFO - Retrying request to /v1/messages in 0.971623 seconds
+2024-10-29 18:30:54,711 - INFO - HTTP Request: POST https://us-east5-aiplatform.googleapis.com/v1/projects/utopian-saga-438818-j0/locations/us-east5/publishers/anthropic/models/claude-3-5-sonnet-v2@20241022:rawPredict "HTTP/1.1 429 Too Many Requests"
+2024-10-29 18:30:54,713 - INFO - Retrying request to /v1/messages in 1.800191 seconds

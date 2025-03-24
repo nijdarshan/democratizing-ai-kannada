@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html><head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>Baraha Dictionary</title>
+<link href="../help/baraha.css" rel="stylesheet" type="text/css"/>
+<style type="text/css"> <!--
+body {
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+//-->
+</style>
+</head>
+
+<body style="BACKGROUND:#c8e7fb; MARGIN-TOP: 0pt; MARGIN-LEFT: 0pt; MARGIN-RIGHT: 0pt; MARGIN-BOTTOM: 0pt;">
+
+<script type="text/javascript">
+        function dig_into(start, end, alpha)
+        {
+                //alert(alpha);
+                document.thisForm.WordStart.value = start;
+                document.thisForm.WordEnd.value = end;
+
+                var radioObj = document.thisForm.AlphaType;
+                var radioLength = radioObj.length;
+                if(radioLength == undefined)
+                {
+                        radioObj.checked = (radioObj.value == alpha.toString());
+                        return;
+                }
+                for(var i = 0; i < radioLength; i++)
+                {
+                        radioObj[i].checked = false;
+                        if(radioObj[i].value == alpha.toString())
+                        {
+                                radioObj[i].checked = true;
+                        }
+                }
+
+                document.forms['thisForm'].submit();
+                return true;
+        }
+</script>
+
+<table align="center" border="1" cellpadding="0" cellspacing="0" height="100%" width="60%">
+        <tbody><tr height="1%"><td>
+        <table style="background-color:RGB(232,232,232);" width="100%">
+                <tbody><tr>
+                        <td>
+                                <p align="right" class="label"><a href="main.php">ಹುಡುಕು</a> | <a href="nighantu_sahaya.htm">ಸಹಾಯ</a></p>
+                        </td>
+                </tr>
+        </tbody></table>
+        </td></tr>
+
+        <tr>
+        <td style="vertical-align:top;">
+                <table cellpadding="0" cellspacing="0" style="background-color:#c8e7fb;" width="100%">
+                <tbody><tr>
+                <td align="center" valign="top">
+                        <form action="browse.php" id="thisForm" method="post" name="thisForm">
+                        <input checked="" class="control" id="DictType" name="DictType" onclick='return dig_into(0, 0,"ಅ");' type="radio" value="1"/><a href="nighantu1.htm">ಜಿ.ವಿ ಕನ್ನಡ </a>
+                        <input class="control" id="DictType" name="DictType" onclick='return dig_into(0, 0,"a");' type="radio" value="2"/><a href="nighantu2.htm">ಜಿ.ವಿ ಇಂಗ್ಲಿಷ್</a>
+                        <input class="control" id="DictType" name="DictType" onclick='return dig_into(0, 0,"a");' type="radio" value="3"/><a href="nighantu3.htm">ಶಂಕರ ಭಟ್ </a>
+                        <input class="control" id="DictType" name="DictType" onclick='return dig_into(0, 0,"a");' type="radio" value="4"/><a href="nighantu4.htm">ನಿಮ್ಮದೇ ನಿಘಂಟು</a>
+                        <input class="control" id="DictType" name="DictType" onclick='return dig_into(0, 0,"ಅ");' type="radio" value="5"/><a href="nighantu5.htm">ದಾಸ ಸಾಹಿತ್ಯ</a>
+                        <input class="control" id="DictType" name="DictType" onclick='return dig_into(0, 0,"a");' type="radio" value="6"/><a href="http://honalu.net/2014/02/18/%e0%b2%aa%e0%b2%a6-%e0%b2%aa%e0%b2%a6-%e0%b2%95%e0%b2%a8%e0%b3%8d%e0%b2%a8%e0%b2%a1-%e0%b2%aa%e0%b2%a6%e0%b2%be%e0%b2%a8%e0%b3%87/">ಪಪಕಪ</a>
+                        <input class="control" id="DictType" name="DictType" onclick='return dig_into(0, 0,"ಅ");' type="radio" value="7"/><a href="nighantu6.htm">ಬುಕ್ಕಾಂಬುಧಿ</a>
+                        <br/>
+                        <b>{</b><input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"a");' type="radio" value="a"/>a
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"b");' type="radio" value="b"/>b
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"c");' type="radio" value="c"/>c
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"d");' type="radio" value="d"/>d
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"e");' type="radio" value="e"/>e
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"f");' type="radio" value="f"/>f
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"g");' type="radio" value="g"/>g
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"h");' type="radio" value="h"/>h
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"i");' type="radio" value="i"/>i
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"j");' type="radio" value="j"/>j
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"k");' type="radio" value="k"/>k
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"l");' type="radio" value="l"/>l
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"m");' type="radio" value="m"/>m
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"n");' type="radio" value="n"/>n
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"o");' type="radio" value="o"/>o
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"p");' type="radio" value="p"/>p
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"q");' type="radio" value="q"/>q
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"r");' type="radio" value="r"/>r
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"s");' type="radio" value="s"/>s
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"t");' type="radio" value="t"/>t
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"u");' type="radio" value="u"/>u
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"v");' type="radio" value="v"/>v
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"w");' type="radio" value="w"/>w
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"x");' type="radio" value="x"/>x
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"y");' type="radio" value="y"/>y
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"z");' type="radio" value="z"/>z
+<b>}</b><br/>
+<b>{</b><input checked="" class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಅ");' type="radio" value="ಅ"/>ಅ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಆ");' type="radio" value="ಆ"/>ಆ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಇ");' type="radio" value="ಇ"/>ಇ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಈ");' type="radio" value="ಈ"/>ಈ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಉ");' type="radio" value="ಉ"/>ಉ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಊ");' type="radio" value="ಊ"/>ಊ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಋ");' type="radio" value="ಋ"/>ಋ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಎ");' type="radio" value="ಎ"/>ಎ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಏ");' type="radio" value="ಏ"/>ಏ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಐ");' type="radio" value="ಐ"/>ಐ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಒ");' type="radio" value="ಒ"/>ಒ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಓ");' type="radio" value="ಓ"/>ಓ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಔ");' type="radio" value="ಔ"/>ಔ
+<b>}</b><br/>
+<b>{</b><input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಕ");' type="radio" value="ಕ"/>ಕ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಖ");' type="radio" value="ಖ"/>ಖ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಗ");' type="radio" value="ಗ"/>ಗ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಘ");' type="radio" value="ಘ"/>ಘ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಙ");' type="radio" value="ಙ"/>ಙ
+<b>}</b>
+<b>{</b><input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಚ");' type="radio" value="ಚ"/>ಚ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಛ");' type="radio" value="ಛ"/>ಛ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಜ");' type="radio" value="ಜ"/>ಜ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಝ");' type="radio" value="ಝ"/>ಝ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಞ");' type="radio" value="ಞ"/>ಞ
+<b>}</b>
+<b>{</b><input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಟ");' type="radio" value="ಟ"/>ಟ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಠ");' type="radio" value="ಠ"/>ಠ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಡ");' type="radio" value="ಡ"/>ಡ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಢ");' type="radio" value="ಢ"/>ಢ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಣ");' type="radio" value="ಣ"/>ಣ
+<b>}</b>
+<b>{</b><input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ತ");' type="radio" value="ತ"/>ತ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಥ");' type="radio" value="ಥ"/>ಥ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ದ");' type="radio" value="ದ"/>ದ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಧ");' type="radio" value="ಧ"/>ಧ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ನ");' type="radio" value="ನ"/>ನ
+<b>}</b>
+<b>{</b><input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಪ");' type="radio" value="ಪ"/>ಪ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಫ");' type="radio" value="ಫ"/>ಫ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಬ");' type="radio" value="ಬ"/>ಬ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಭ");' type="radio" value="ಭ"/>ಭ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಮ");' type="radio" value="ಮ"/>ಮ
+<b>}</b><br/>
+<b>{</b><input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಯ");' type="radio" value="ಯ"/>ಯ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ರ");' type="radio" value="ರ"/>ರ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಲ");' type="radio" value="ಲ"/>ಲ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ವ");' type="radio" value="ವ"/>ವ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಶ");' type="radio" value="ಶ"/>ಶ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಷ");' type="radio" value="ಷ"/>ಷ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಸ");' type="radio" value="ಸ"/>ಸ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಹ");' type="radio" value="ಹ"/>ಹ
+<input class="control" id="AlphaType" name="AlphaType" onclick='return dig_into(0,0,"ಳ");' type="radio" value="ಳ"/>ಳ
+<b>}</b>
+                        <p>
+                        <input id="WordStart" name="WordStart" type="hidden" value="2"/>
+                        <input id="WordEnd" name="WordEnd" type="hidden" value="1388"/>
+                        <input id="FirstTime" name="FirstTime" type="hidden" value="false"/>
+                        </p>
+                        </form>
+                </td>
+                </tr>
+                </tbody></table>
+        </td>
+        </tr>
+<tr>
+<td style="border-right: 1px solid #c8e7fb; BACKGROUND:#ffffff;">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td align="center" colspan="2" style="border-bottom: 1px solid #c8e7fb"><table width="100%"><tbody><tr><td align="left"> </td><td align="center"><p class="label">ಪ್ರೊ. ಜಿ. ವೆಂಕಟಸುಬ್ಬಯ್ಯ ಕನ್ನಡ-ಕನ್ನಡ ನಿಘಂಟು (20580)</p></td><td align="right"> </td></tr></tbody></table></td></tr>
+<tr><td>
+<table cellpadding="20" width="100%"><tbody><tr><td>
+<p><a href="#" onclick='return dig_into(2, 93, "ಅ");'> ಅಂಕ - ಅಂದಳ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(94, 185, "ಅ");'> ಅಂದಾಜು - ಅಖಂಡ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(186, 277, "ಅ");'> ಅಖರ್ವ - ಅಚಾತುರ್ಯ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(278, 369, "ಅ");'> ಅಚಿರ - ಅಡಲು </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(370, 461, "ಅ");'> ಅಡಲು - ಅತಿಮಾನಸ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(462, 553, "ಅ");'> ಅತಿರಥ - ಅಧ್ವ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(554, 645, "ಅ");'> ಅಧ್ವರ - ಅನುಚರ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(646, 737, "ಅ");'> ಅನುಚರ - ಅಪಭ್ರಂಶ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(738, 829, "ಅ");'> ಅಪಮೃತ್ಯು - ಅಭಯಹಸ್ತ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(830, 921, "ಅ");'> ಅಭವ - ಅಮೂರ್ತಕಲೆ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(922, 1013, "ಅ");'> ಅಮೂಲ್ಯ - ಅರ್ಚಕ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(1014, 1105, "ಅ");'> ಅರ್ಚನೆ - ಅಳವು </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(1106, 1197, "ಅ");'> ಅಳವೆ - ಅವಲೀಢ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(1198, 1289, "ಅ");'> ಅವಲೇಪ - ಅಷ್ಟಾವಧಾನ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(1290, 1381, "ಅ");'> ಅಷ್ಟೋತ್ತರ - ಅಹರ್ನಿಶಿ </a> (92)</p>
+<p style="border-top: 1px solid #c8e7fb;"><a href="#" onclick='return dig_into(1382, 1388, "ಅ");'> ಅಹಲೆಕಾರ - ಅಹ್ನ </a> (7)</p>
+</td></tr></tbody></table>
+</td></tr>
+<tr><td align="center" colspan="2" style="border-top: 1px solid #c8e7fb"><b>ಅಂಕ</b>   -   <b>ಅಹ್ನ</b> : ಒಟ್ಟು  1387 ಪದಗಳು</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<br/>
+</body></html>

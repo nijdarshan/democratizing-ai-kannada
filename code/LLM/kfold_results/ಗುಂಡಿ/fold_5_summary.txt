@@ -1,0 +1,3 @@
+Word: ಗುಂಡಿ
+Fold 5 Accuracy: 70.00%
+Number of examples - Train: 80, Test: 20

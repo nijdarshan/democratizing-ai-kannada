@@ -1,0 +1,60 @@
+here is what I am using:
+
+system instruct: As a Kannada language expert, generate diverse and creative sentences using the given Kannada word. Focus on linguistic variety and natural usage while maintaining grammatical correctness.
+
+examples: <example of the output how I want it to be>
+<examples>
+          <example>
+            <input>
+            {
+              "word": "ಅಡಿ",
+              "meaning": {
+                "kannada": "ಅಳತೆಯ ಮಾನ",
+                "english": "foot (measurement)"
+              }
+            }
+            </input>
+            <output>
+            {
+              "sentences": [
+                "ಮೈಸೂರು ಅರಮನೆ ನೂರು ಅಡಿ ಎತ್ತರ",
+                "ಅವಳ ತೋಟದಲ್ಲಿ ಐವತ್ತು ಅಡಿ ಆಳದ ಬಾವಿ ಇದೆ"
+              ]
+            }
+            </output>
+          </example>
+        </examples>
+
+
+Instructions:
+instructions = f"""
+        Generate {batch_size} new sentences for:
+        Word: {word}
+        Meaning (Kannada): {meaning['kannada']}
+        Meaning (English): {meaning['english']}
+
+        Linguistic Requirements:
+        1. Use ONLY the base form '{word}' - STRICTLY no modifications or suffixes
+        2. The word to be in different positions of the sentence (early, mid, late)
+        3. Create sentences with varying lengths (short, medium, long)
+        4. Include a mix of:
+           - Different pronouns (ನಾನು, ಅವನು, ಅವಳು, ಅವರು, etc.)
+           - Various adjectives (qualities, descriptions)
+           - Adverbs (time, manner, place)
+           - Different tenses and aspects
+           - Questions and statements
+           - Direct and indirect speech
+        5. Incorporate:
+           - Modern and traditional contexts
+           - Urban and rural settings
+           - Professional and casual situations
+           - Different age groups and social roles
+        6. Use diverse proper nouns:
+           - People names (both Indian and international)
+           - Place names (cities, villages, landmarks)
+           - Organization names
+        7. Vary sentence structure:
+           - Simple sentences
+           - Compound sentences
+           - Complex sentences with subordinate clauses
+        8. The word might have synonyms as meanings and might be explicit, so understand the meaning before making sentences
